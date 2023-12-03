@@ -1,6 +1,6 @@
 'use client'
-
 import axios from 'axios'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 const page = () => {
@@ -20,8 +20,14 @@ const page = () => {
     const data = response.data;
     setLoadImages(data)
   }
+
+  const viewImage = (img) => {
+    console.log(img);
+    
+  } 
+
   let imageGalary = RenderImage.map((img, i) => {
-    return <img className='m-2 rounded-md h-40 w-40' src={img} />
+    return <img className='m-2 rounded-md h-40 w-40' src={img} onClick={()=>viewImage(img)} />
   })
 
   return (
@@ -48,7 +54,9 @@ const page = () => {
           })
         }
       </div>
-
+      <div>
+        <img src='test.png'/>
+      </div>
 
     </>
   )
