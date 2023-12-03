@@ -54,9 +54,8 @@ const page = () => {
           })
         }
       </div>
-      <div>
-        <img src='test.png'/>
-      </div>
+      
+      
 
     </>
   )
